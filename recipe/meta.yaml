@@ -24,14 +24,15 @@ requirements:
     - boltons
     - bottleneck
     - fs
-    - jinja2
     - ipywidgets
+    - k3d
     - matplotlib-base
+    - meshio
     - networkx
     - numpy >=1.18
     - pandas >=1.0
     - pint >=0.11
-    - python >=3.6
+    - python >=3.8
     - scipy <1.6
     - sympy >=1.6
     - xarray >=0.15

@@ -33,7 +33,7 @@ requirements:
     - pandas >=1.0
     - pint >=0.11
     - python >=3.8
-    - scipy <1.6
+    - scipy >=1.4,!=1.6.0,!=1.6.1
     - sympy >=1.6
     - xarray >=0.15
 

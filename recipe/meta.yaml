@@ -20,7 +20,7 @@ requirements:
     - setuptools_scm
     - python
   run:
-    - asdf >=2.7
+    - asdf >=2.8
     - boltons
     - bottleneck
     - fs

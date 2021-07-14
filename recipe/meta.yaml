@@ -21,6 +21,7 @@ requirements:
     - python
   run:
     - asdf >=2.8
+    - attrdict
     - boltons
     - bottleneck
     - fs

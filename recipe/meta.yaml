@@ -42,19 +42,12 @@ requirements:
 test:
   requires:
     - pip
-    - pytest
-    - pytest-xdist
-    # Remove once this is fixed: https://github.com/K3D-tools/K3D-jupyter/issues/312
-    - jupyterlab
-  files:
-    - conftest.py
   imports:
     - weldx
     - weldx.visualization
   commands:
     - pip check
     - welding_schema --help
-    - pytest --pyargs weldx.tests -n auto --dist=loadfile --tb=short --color=yes
 
 about:
   home: https://www.bam.de/Content/EN/Projects/WelDX/weldx.html

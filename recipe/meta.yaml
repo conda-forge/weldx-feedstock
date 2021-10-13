@@ -42,6 +42,7 @@ requirements:
 test:
   requires:
     - pip
+    - jupyterlab  # for k3d
   imports:
     - weldx
     - weldx.visualization

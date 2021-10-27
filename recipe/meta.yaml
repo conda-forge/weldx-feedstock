@@ -10,7 +10,7 @@ source:
   sha256: 6d16f5375b6fb88b19d5e65d31294a92d7b123b4d581ad080f2443d94743f762
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -32,7 +32,7 @@ requirements:
     - networkx
     - numpy >=1.18
     - pandas >=1.0
-    - pint >=0.11
+    - pint >=0.11,<0.18
     - psutil
     - python >=3.8,<3.10
     - scipy >=1.4,!=1.6.0,!=1.6.1

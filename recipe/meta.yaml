@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d16f5375b6fb88b19d5e65d31294a92d7b123b4d581ad080f2443d94743f762
+  sha256: 315680c4980f6817de4d07a28586c62692a7caa8dcc750d74fea28fb2167b4e1
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 

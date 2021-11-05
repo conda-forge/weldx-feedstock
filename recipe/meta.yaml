@@ -24,6 +24,7 @@ requirements:
     - boltons
     - bottleneck
     - fs
+    - ipykernel <6.4
     - ipywidgets
     - k3d !=2.10
     - matplotlib-base

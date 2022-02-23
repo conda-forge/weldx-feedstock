@@ -10,7 +10,7 @@ source:
   sha256: f73c718012f2b2caa559b6f1f0a6ccadcf407c8fcb2f514e97ee39aba1fb419d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,9 +20,9 @@ requirements:
     - setuptools_scm
     - python
   run:
-    - asdf >=2.8
+    - asdf >=2.8.2,<2.10
     - boltons
-    - bottleneck
+    - bottleneck >=1.3.4
     - fs
     - ipywidgets
     - k3d !=2.10
@@ -31,7 +31,7 @@ requirements:
     - networkx
     - numpy >=1.18
     - pandas >=1.0
-    - pint >=0.11
+    - pint >=0.18
     - psutil
     - python >=3.8,<3.10
     - scipy >=1.4,!=1.6.0,!=1.6.1

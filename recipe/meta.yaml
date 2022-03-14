@@ -28,7 +28,7 @@ requirements:
     - k3d !=2.10
     - matplotlib-base
     - meshio
-    - networkx
+    - networkx >=2,!=2.7.0
     - numpy >=1.18
     - pandas >=1.0
     - pint >=0.11

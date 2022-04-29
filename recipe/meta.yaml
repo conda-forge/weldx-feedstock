@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f73c718012f2b2caa559b6f1f0a6ccadcf407c8fcb2f514e97ee39aba1fb419d
+  sha256: 0eebefbb1263814c5f5d118b12b202979b4cf745b274fd66ed8081452d9ef4bb
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,28 +20,29 @@ requirements:
     - setuptools_scm
     - python
   run:
+    - python >=3.8,<3.11
+    - numpy >=1.20
     - asdf >=2.8.2
+    - pandas >=1.0
+    - xarray >=0.19
+    - scipy >=1.4,!=1.6.0,!=1.6.1
+    - sympy >=1.6
+    - pint >=0.18
+    - pint-xarray >=0.2.1
+    - bottleneck >=1.3.3
     - boltons
-    - bottleneck >=1.3.4
+    - bidict
+    - networkx >=2,!=2.7.0
+    - matplotlib-base >=3
     - fs
     - ipywidgets
     - k3d !=2.10
-    - matplotlib-base
     - meshio
-    - networkx >=2,!=2.7.0
-    - numpy >=1.18
-    - pandas >=1.0
-    - pint >=0.11
     - psutil
-    - python >=3.8,<3.10
-    - scipy >=1.4,!=1.6.0,!=1.6.1
-    - sympy >=1.6
-    - xarray >=0.15
 
 test:
   requires:
     - pip
-    - jupyterlab >=3  # for k3d
   imports:
     - weldx
     - weldx.visualization

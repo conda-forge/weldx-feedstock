@@ -20,6 +20,7 @@ requirements:
     - setuptools_scm
     - python
   run:
+    - python >=3.8,<3.11
     - numpy >=1.20
     - asdf >=2.8.2
     - pandas >=1.0
@@ -38,12 +39,10 @@ requirements:
     - k3d !=2.10
     - meshio
     - psutil
-    - python >=3.8,<3.11
 
 test:
   requires:
     - pip
-    - jupyterlab >=3  # for k3d
   imports:
     - weldx
     - weldx.visualization

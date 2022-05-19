@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0eebefbb1263814c5f5d118b12b202979b4cf745b274fd66ed8081452d9ef4bb
+  sha256: dd1f949eb7c657f52aae5c4f8abe42d5d13e776946869304246d54dadcb33931
 
 build:
   number: 0
@@ -32,23 +32,22 @@ requirements:
     - bottleneck >=1.3.3
     - boltons
     - bidict
-    - networkx >=2,!=2.7.0
-    - matplotlib-base >=3
+    - networkx >=2,!=2.7.0,<=2.8.0
     - fs
-    - ipywidgets
-    - k3d !=2.10
     - meshio
     - psutil
-
+    - IPython
 test:
   requires:
     - pip
+    - pytest-xdist
   imports:
     - weldx
     - weldx.visualization
   commands:
     - pip check
     - welding_schema --help
+    - pytest -n 10  --pyargs weldx --doctest-modules
 
 about:
   home: https://www.bam.de/Content/EN/Projects/WelDX/weldx.html

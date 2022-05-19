@@ -40,14 +40,12 @@ requirements:
 test:
   requires:
     - pip
-    - pytest-xdist
   imports:
     - weldx
     - weldx.visualization
   commands:
     - pip check
     - welding_schema --help
-    - pytest -n 10  --pyargs weldx --doctest-modules
 
 about:
   home: https://www.bam.de/Content/EN/Projects/WelDX/weldx.html

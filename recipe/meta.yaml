@@ -10,7 +10,7 @@ source:
   sha256: d39cac0a6e2f1ada968372e78049723597f0b5418687c5d6473762046fbe7361 
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,7 +24,7 @@ requirements:
     - numpy >=1.20
     - asdf >=2.8.2
     - pandas >=1.0
-    - xarray >=0.19
+    - xarray >=0.19,<2022.09.0
     - scipy >=1.4,!=1.6.0,!=1.6.1
     - sympy >=1.6
     - pint >=0.18

@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 29d073b3e948ab1108849a5d7e7fd9b98862779b89dc16a9c8d0edc7b551c379
+  sha256: 358d519f06be28995ef7fbce16e18d81d751d3fcdaba25dc46b5ef5211a99ca2
 
 build:
   number: 0
@@ -20,19 +20,19 @@ requirements:
     - setuptools_scm
     - python
   run:
-    - python >=3.8
+    - python >=3.9
     - numpy >=1.20
-    - asdf >=2.8.2,!=2.14.0,!=2.14.1,!=2.14.2
+    - asdf >=2.15.0
     - pandas >=1.0
-    - xarray >=0.19,<2022.09.0
-    - scipy >=1.4,!=1.6.0,!=1.6.1
+    - xarray >=2022.09.0
+    - scipy >=1.6.2
     - sympy >=1.6
     - pint >=0.18
-    - pint-xarray >=0.2.1
+    - pint-xarray >=0.3
     - bottleneck >=1.3.3
     - boltons
     - bidict
-    - networkx >=2,!=2.7.0,!=2.8.1
+    - networkx >=2.8.2
     - fs
     - meshio
     - psutil

@@ -1,11 +1,11 @@
-About weldx
-===========
+About weldx-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/weldx-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.bam.de/Content/EN/Projects/WelDX/weldx.html
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/weldx-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python API for the WelDX file format and standard
 

@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8376c691d26676661e31d9b796c055f872b43c0c5765144f2ee1a6c4917e3aa5
 
 build:
@@ -17,8 +17,9 @@ build:
 requirements:
   host:
     - pip
+    - setuptools
     - setuptools_scm
-    - python <3.12
+    - python <3.13
   run:
     - python >=3.9,<3.13
     - numpy >=1.20,<2

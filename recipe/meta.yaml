@@ -10,7 +10,7 @@ source:
   sha256: 8376c691d26676661e31d9b796c055f872b43c0c5765144f2ee1a6c4917e3aa5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,9 +19,9 @@ requirements:
     - pip
     - setuptools
     - setuptools_scm
-    - python <3.13
+    - python {{ python_min }}
   run:
-    - python >=3.9,<3.13
+    - python >={{ python_min }},<3.13
     - numpy >=1.20,<2
     - asdf >=2.15.1,<4
     - pandas >=1.5
@@ -41,6 +41,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   imports:
     - weldx
     - weldx.visualization

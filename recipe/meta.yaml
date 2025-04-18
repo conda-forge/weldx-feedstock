@@ -18,12 +18,12 @@ requirements:
   host:
     - pip
     - setuptools
-    - setuptools_scm
+    - setuptools_scm>=8
     - python {{ python_min }}
   run:
-    - python >={{ python_min }},<3.13
-    - numpy >=1.20,<2
-    - asdf >=2.15.1,<4
+    - python >={{ python_min }},<3.14
+    - numpy >=1.20
+    - asdf>=2.15.1,<5
     - pandas >=1.5
     - xarray >=2022.09.0
     - scipy >=1.6.2

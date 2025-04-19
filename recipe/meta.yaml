@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.6.9" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8376c691d26676661e31d9b796c055f872b43c0c5765144f2ee1a6c4917e3aa5
+  sha256: 4edb22d7b969c74bb177396fe2de2a91193d30b116a68b877b7ebf277ab094ee
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -18,12 +18,12 @@ requirements:
   host:
     - pip
     - setuptools
-    - setuptools_scm
+    - setuptools_scm >=8
     - python {{ python_min }}
   run:
-    - python >={{ python_min }},<3.13
-    - numpy >=1.20,<2
-    - asdf >=2.15.1,<4
+    - python >={{ python_min }},<3.14
+    - numpy >=1.20
+    - asdf >=2.15.1,<5
     - pandas >=1.5
     - xarray >=2022.09.0
     - scipy >=1.6.2

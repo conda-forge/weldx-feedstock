@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4edb22d7b969c74bb177396fe2de2a91193d30b116a68b877b7ebf277ab094ee
+  sha256: f2a4034217d8bc3fa2415fb095f270ea8d593980d22313fbecdc5ea8356e2d23
 
 build:
   number: 0
@@ -37,7 +37,7 @@ requirements:
     - fs
     - meshio
     - psutil
-    - IPython
+    - IPython >=8
 test:
   requires:
     - pip

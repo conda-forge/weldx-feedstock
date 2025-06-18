@@ -10,7 +10,7 @@ source:
   sha256: f2a4034217d8bc3fa2415fb095f270ea8d593980d22313fbecdc5ea8356e2d23
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -29,7 +29,7 @@ requirements:
     - scipy >=1.6.2
     - sympy >=1.6
     - pint >=0.21
-    - pint-xarray >=0.3
+    - pint-xarray >=0.3,<0.5
     - bottleneck >=1.3.3
     - boltons
     - bidict

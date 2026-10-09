@@ -1,5 +1,5 @@
 {% set name = "weldx" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2254129c325a829e980ec700ff63c7cb12e4f7e5fc7dbbc86e7d655ec73b0d0b
+  sha256: 01876eae8d40f0b17a27bd119274a38724ca3336b20b5e57a929205b41f66c61
 
 build:
   number: 0
